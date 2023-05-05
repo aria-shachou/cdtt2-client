@@ -28,6 +28,9 @@ function Register() {
           }),
         }
       );
+      if (data.error) {
+        throw new Error("An error occurred.");
+      }
       Router.push("/login");
     } catch (error) {
       alert("Email or user name has been already used!");
